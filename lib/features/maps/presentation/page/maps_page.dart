@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:location/location.dart';
 
 class MapsPage extends StatefulWidget {
   const MapsPage({super.key});
@@ -10,34 +9,28 @@ class MapsPage extends StatefulWidget {
 }
 
 class _MapsPageState extends State<MapsPage> {
-  GoogleMapController? mapController;
-  Location location = Location(); // Create a Location instance
-  Set<Marker> markers = {};
+  late GoogleMapController? mapController;
+
+  final LatLng _center = const LatLng(19.302857, -99.1886819);
 
   void _onMapCreated(GoogleMapController controller) async {
     mapController = controller;
-    await _getUserLocation();
   }
 
-  Future<void> _getUserLocation() async {
-    final userLocation = await location.getLocation();
-    setState(() {
-      markers.add(Marker(
-        markerId: MarkerId('userLocation'),
-        position: LatLng(userLocation.latitude!, userLocation.longitude!),
-        infoWindow: InfoWindow(title: 'Your Location'),
-      ));
-    });
-  }
   @override
   Widget build(BuildContext context) {
-    return Text('data');
-    // return GoogleMap(
-    //     onMapCreated: _onMapCreated,
-    //     initialCameraPosition: CameraPosition(
-      //     target: LatLng(37.7749, -122.4194), // San Francisco coordinates
-      //     zoom: 12,
-      //   ),
-      // );
+    return GoogleMap(
+        onMapCreated: _onMapCreated,
+        initialCameraPosition: CameraPosition(
+          target: _center, // San Francisco coordinates
+          zoom: 12,
+        ),
+        markers: {
+          const Marker(
+            markerId: MarkerId('México'),
+            position: LatLng(19.302857, -99.1886819),
+          )
+        },
+    );
   }
 }
