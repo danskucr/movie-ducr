@@ -19,8 +19,8 @@ class _MovieRowState extends State<MovieRow> {
        child: Column(
          children: [
            ListTile(
-             title: Text('Wonka'),
-             subtitle: Text('2023-12-06'),
+             title: Text(widget.movie.title),
+             subtitle: Text(widget.movie.releaseDate.toString()),
              trailing: Icon(Icons.favorite_outline),
            ),
            Container(
@@ -34,7 +34,7 @@ class _MovieRowState extends State<MovieRow> {
            Container(
              padding: EdgeInsets.all(16.0),
              alignment: Alignment.centerLeft,
-             child: Text('Willy Wonka – chock-full of ideas and determined to change the world one delectable bite at a time – is proof that the best things in life begin with a dream, and if you’re lucky enough to meet Willy Wonka, anything is possible.'),
+             child: Text(widget.movie.overview),
            ),
          ],
        ));

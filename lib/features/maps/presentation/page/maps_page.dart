@@ -31,12 +31,13 @@ class _MapsPageState extends State<MapsPage> {
   }
   @override
   Widget build(BuildContext context) {
-    return GoogleMap(
-        onMapCreated: _onMapCreated,
-        initialCameraPosition: CameraPosition(
-          target: LatLng(37.7749, -122.4194), // San Francisco coordinates
-          zoom: 12,
-        ),
-      );
+    return Text('data');
+    // return GoogleMap(
+    //     onMapCreated: _onMapCreated,
+    //     initialCameraPosition: CameraPosition(
+      //     target: LatLng(37.7749, -122.4194), // San Francisco coordinates
+      //     zoom: 12,
+      //   ),
+      // );
   }
 }

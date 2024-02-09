@@ -9,7 +9,9 @@ class MovieDatasourse {
         headers:  {
       'Accept': 'application/json',
       'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwNmMxNTE1MWQyY2YyMTlkMmE3MzY4ZWNmNTQ4ODdiNiIsInN1YiI6IjY1YzU4ZWE2NDFlZWUxMDBjODk0YTk2NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZfJW_KJW1Qs5Gp0_WXah4DIt3eNb65c-yRB5a7wKxoM'});
-    var indices = MovieResponse.fromJson(jsonDecode(response.body));
-    return indices;
+    var movies = MovieResponse.fromJson(jsonDecode(response.body));
+    print(response.statusCode);
+    print(response.body);
+    return movies;
   }
 }

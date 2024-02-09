@@ -38,41 +38,27 @@ class _MovieInfoState extends State<MovieInfo> {
     //           )
     //         );
     
-    return BlocConsumer<MovieBloc, MovieState>(
-      listener: (context, state) {
-        if (state is MoviesError) {
-          print('ERROR AL OBTENER INFORMACION');
-        }
-      },
+    return BlocBuilder<MovieBloc, MovieState>(
       builder:  (context, state) {
         if (state is MovieLoading) {
           return const Center(
             child: CircularProgressIndicator()
           );
         } else if (state is MovieLoaded){
-          return state.movies.results.isEmpty
-            ? SingleChildScrollView(
-              child: Container(
-                height: 500,
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: ListView.separated(
-                        separatorBuilder: (_, index) {
-                          return const SizedBox(
-                            height: 8,
-                          );
-                        },
-                        itemCount: 1,
-                        itemBuilder: (context, index) {
-                          return MovieRow(movie: state.movies.results[index],);
-                        },
-                      ),
-                    ),
-                  ],
-
-                ),
-              )
+          return state.movies.results.isNotEmpty
+            ? Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: ListView.separated(
+                separatorBuilder: (_, index) {
+                  return const SizedBox(
+                    height: 8,
+                  );
+                },
+                itemCount: state.movies.results.length,
+                itemBuilder: (context, index) {
+                  return MovieRow(movie: state.movies.results[index]);
+                },
+              ),
             )
              : Container(
                   height: 100,
@@ -86,8 +72,11 @@ class _MovieInfoState extends State<MovieInfo> {
                     ],
                   ),
                 );
+        }else{
+          return Center(
+            child: Text("Error al consultar Perfil")
+          );
         }
-        return Container();
       }
     );
   }
