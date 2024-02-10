@@ -92,10 +92,13 @@ class _ProfileInfoState extends State<ProfileInfo> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        const CircleAvatar(
-          radius: 80, // Image radius
-          backgroundImage: NetworkImage('https://cdn2.actitudfem.com/media/files/styles/big_img/public/images/2019/08/de-donde-salio-el-meme-del-gato-en-la-mesa-portada.jpg'),
-        ),
+          CircleAvatar(
+            radius: 90,
+            child: CircleAvatar(
+              radius: 80, // Image radius
+              backgroundImage: NetworkImage('https://media.themoviedb.org/t/p/w300_and_h300_face/vLw9qJFxmnZGbpusBHb7sYlG7Io.jpg'),
+                    ),
+          ),
           Text(right,
             style: styleText(),
             overflow: TextOverflow.ellipsis,

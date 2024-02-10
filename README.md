@@ -1,16 +1,19 @@
-# movie_ducr
+# Peliculas Flutter
 
-A new Flutter project.
+Peliculas es una aplicación movil para poder consular información de peliculas en tiempo real, teniendo la información del usuario de TMDB, ultimas peliculas lanzadas al mercado y un mapa de Google para iOS y Android.
 
-## Getting Started
+## Ejecución
 
-This project is a starting point for a Flutter application.
+Para ejecutar esta aplicación es necesario tener la ultima version de Flutter para poder ejecutar las dependecias de Pub.dev instaladas. En la pagina oficial de Flutter se puede encontrar los pasos para instalar Flutter en el ordenador. Una vez instalada se tendra que ejecutar el siguiente comando para ejecutar la aplicación.
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+flutter run lib/main.dart
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Diseño
+
+Se busco el diseño mas amigable para los usuarios que quisieran consultar la información de su cuenta de TMDB, con una buena ubicación.
+
+Please make sure to update tests as appropriate.
