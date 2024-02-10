@@ -12,7 +12,22 @@ class ProfilePersonal extends StatefulWidget {
 class _ProfilePersonalState extends State<ProfilePersonal> {
   TextStyle style() {
     return const TextStyle(
-      fontSize: 12,
+      fontSize: 13,
+      color: Colors.black,
+      fontFamily: 'Calibri',
+    );
+  }
+  TextStyle styleblack() {
+    return const TextStyle(
+      fontSize: 13,
+      color: Colors.black,
+      fontFamily: 'Calibri',
+      fontWeight: FontWeight.w600
+    );
+  }
+  TextStyle styleText() {
+    return const TextStyle(
+      fontSize: 15,
       color: Colors.black,
       fontFamily: 'Calibri',
     );
@@ -22,7 +37,7 @@ class _ProfilePersonalState extends State<ProfilePersonal> {
     return Column(
       children: [
         Text('Aqui se muestra la informacion personal respecto a mi usuario.',
-            style: style(),
+            style: styleText(),
         ),
         rowInfo('Nombre: ', 'Dante Uriel Chávez Rodríguez'),
         rowInfo('Username: ', widget.profile.username),
@@ -39,7 +54,12 @@ class _ProfilePersonalState extends State<ProfilePersonal> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(left,
-            style: style(),
+              style: TextStyle(
+              fontSize: 13,
+              color: Colors.black,
+              fontFamily: 'Calibri',
+              fontWeight: FontWeight.bold
+            ),
             overflow: TextOverflow.ellipsis,
           ),
           Text(right,

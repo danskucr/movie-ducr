@@ -47,21 +47,22 @@ class _ProfileInfoState extends State<ProfileInfo> {
           );
         }else if (state is ProfileLoaded){
           return Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 rowImage(state.profile.username),
                 ExpansionPanelList.radio(
+                  expandIconColor: Colors.deepPurpleAccent,
                   expandedHeaderPadding: EdgeInsets.only(left: 10, right: 10),
                   elevation: 0,
                   children: _steps.map<ExpansionPanelRadio>((Step step) {
                     return ExpansionPanelRadio(
                       canTapOnHeader: true,
-                      backgroundColor: Colors.transparent,
+                      backgroundColor: Colors.deepPurple.shade100,
                       headerBuilder: (BuildContext context, bool isExpanded) {
                         return ListTile(
                           contentPadding: EdgeInsets.only(left: 10),
                           title: step.title == '0' ? 
-                          Text('Personal',
+                          Text('Perfil',
                             style: styleTitle(),
                               overflow: TextOverflow.ellipsis,
                           ) : Text('Referencias',
@@ -82,9 +83,7 @@ class _ProfileInfoState extends State<ProfileInfo> {
 
             ],);
         }else{
-          return Center(
-            child: Text("Error al consultar Perfil")
-          );
+          return Text("Error al consultar Perfil");
         }
       }
     );
@@ -94,7 +93,7 @@ class _ProfileInfoState extends State<ProfileInfo> {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         const CircleAvatar(
-          radius: 48, // Image radius
+          radius: 80, // Image radius
           backgroundImage: NetworkImage('https://cdn2.actitudfem.com/media/files/styles/big_img/public/images/2019/08/de-donde-salio-el-meme-del-gato-en-la-mesa-portada.jpg'),
         ),
           Text(right,

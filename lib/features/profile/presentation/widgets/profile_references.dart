@@ -12,14 +12,14 @@ class ProfileReferences extends StatefulWidget {
 class _ProfileReferenceState extends State<ProfileReferences> {
   TextStyle style() {
     return const TextStyle(
-      fontSize: 12,
+      fontSize: 15,
       color: Colors.black,
       fontFamily: 'Calibri',
     );
   }
   TextStyle styleLink() {
     return const TextStyle(
-      fontSize: 12,
+      fontSize: 13,
       color: Colors.blue,
       fontFamily: 'Calibri',
     );
@@ -30,7 +30,6 @@ class _ProfileReferenceState extends State<ProfileReferences> {
       children: [
         Text('Aqui se muestra las referencias que se tomaron para cada una de las API de la pagina TMDB.',
             style: style(),
-            // overflow: TextOverflow.ellipsis,
         ),
         rowInfo('Profile: ', 'https://api.themoviedb.org/3/account/20976799'),
         rowInfo('Movies: ', 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc'),
@@ -44,7 +43,12 @@ class _ProfileReferenceState extends State<ProfileReferences> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(left,
-            style: style(),
+            style: const TextStyle(
+              fontSize: 13,
+              color: Colors.black,
+              fontFamily: 'Calibri',
+              fontWeight: FontWeight.bold
+            ),
             overflow: TextOverflow.ellipsis,
           ),
           Text(right,

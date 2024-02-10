@@ -28,7 +28,7 @@ class _MapsPageState extends State<MapsPage> {
         markers: {
           const Marker(
             markerId: MarkerId('México'),
-            position: LatLng(19.302857, -99.1886819),
+            position: LatLng(19.302857, -99.1886819)
           )
         },
     );

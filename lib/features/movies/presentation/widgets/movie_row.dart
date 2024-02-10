@@ -27,7 +27,7 @@ class _MovieRowState extends State<MovieRow> {
              height: 200.0,
              child: Ink.image(
                image: NetworkImage(
-                  'https://static.wikia.nocookie.net/gatopedia/images/2/2e/El_gatoo.png/revision/latest?cb=20230103150310&path-prefix=es'),
+                  'https://cdn.pixabay.com/photo/2015/01/11/09/19/film-596009_640.jpg'),
                fit: BoxFit.cover,
              ),
            ),
