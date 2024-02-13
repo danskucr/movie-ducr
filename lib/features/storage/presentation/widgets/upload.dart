@@ -30,7 +30,6 @@ class _UploadState extends State<Upload> {
     if (result == null) return;
     setState(() {
       pickedFile = result.files.first;
-      print(pickedFile);
     });
   }
 
@@ -44,6 +43,8 @@ class _UploadState extends State<Upload> {
     final urlDownload = await snapshot.ref.getDownloadURL();
     setState(() {
       link = urlDownload;
+      //Con esta impresión de consola se puede probar la imagen que se ha subido.
+      print('Link para descargar la imagen que se ha subido a Firebase Storage: $link');
     });
   }
 

@@ -54,7 +54,7 @@ class _ProfilePersonalState extends State<ProfilePersonal> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(left,
-              style: TextStyle(
+              style: const TextStyle(
               fontSize: 13,
               color: Colors.black,
               fontFamily: 'Calibri',

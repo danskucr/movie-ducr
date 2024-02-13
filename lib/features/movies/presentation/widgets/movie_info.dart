@@ -14,30 +14,7 @@ class MovieInfo extends StatefulWidget {
 class _MovieInfoState extends State<MovieInfo> {
   @override
   Widget build(BuildContext context) {
-    // return SingleChildScrollView(
-    //           child: Container(
-    //             height: 500,
-    //             child: Column(
-    //               children: [
-    //                 Expanded(
-    //                   child: ListView.separated(
-    //                     separatorBuilder: (_, index) {
-    //                       return const SizedBox(
-    //                         height: 8,
-    //                       );
-    //                     },
-    //                     itemCount: 1,
-    //                     itemBuilder: (context, index) {
-    //                       return MovieRow();
-    //                     },
-    //                   ),
-    //                 ),
-    //               ],
-
-    //             ),
-    //           )
-    //         );
-    
+  
     return BlocBuilder<MovieBloc, MovieState>(
       builder:  (context, state) {
         if (state is MovieLoading) {
@@ -60,10 +37,10 @@ class _MovieInfoState extends State<MovieInfo> {
                 },
               ),
             )
-             : Container(
+             : SizedBox(
                   height: 100,
                   child: ListView(
-                    children: [
+                    children: const [
                       Center(
                             child: Text(
                               'No hay peliculas que mostrar'
@@ -73,7 +50,7 @@ class _MovieInfoState extends State<MovieInfo> {
                   ),
                 );
         }else{
-          return Center(
+          return const Center(
             child: Text("Error al consultar Perfil")
           );
         }

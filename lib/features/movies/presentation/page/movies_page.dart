@@ -22,7 +22,7 @@ class _MoviesPageState extends State<MoviesPage> {
           },
         ),
       ],
-      child: MovieInfo(),
+      child: const MovieInfo(),
     );
   }
 }

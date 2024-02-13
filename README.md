@@ -23,7 +23,7 @@ Al iniciar la aplicación de películas se mostraba una pantalla con diferentes 
 En esta opción se muestra la imagen personal junto con su nombre de usuario de lado derecho para que el usuario pueda identificarse como posteriormente un panel expandible en el que se le mostrara información más detallada sobre su perfil y sobre las referencias a las que está consultando el usuario.
 
 
-![alt text](https://i.imgur.com/9eTe0PX.png)
+![alt text](https://i.imgur.com/qrGghaX.png)
 
 
 * Películas
@@ -31,14 +31,21 @@ En esta opción se muestra la imagen personal junto con su nombre de usuario de 
 En esta pestaña se muestra un listado de las últimas películas que se han estrenado, para que el usuario pueda conocer el nombre, fecha de estreno y descripción.
 
 
-![alt text](https://i.imgur.com/siCTcRM.png)
+![alt text](https://i.imgur.com/sHDoh8U.png)
 
 * Maps
 
-En la tercera y última pantalla se presenta un mapa interactivo de Google Maps con el que se inicia su ubicación en Perisur de la Ciudad de México, y un marcador que indica la misma ubicación. El usuario puede colocarse en la ubicación que él desee como también poder navegar a través de todo el mapa disponible para Google Maps.
+En la tercera pantalla se presenta un mapa interactivo de Google Maps con el que se inicia su ubicación en Perisur de la Ciudad de México, y un marcador que indica la misma ubicación. El usuario puede colocarse en la ubicación que él desee como también poder navegar a través de todo el mapa disponible para Google Maps.
 
 
-![alt text](https://i.imgur.com/66gs7WR.png)
+![alt text](https://i.imgur.com/hHy5MPB.png)
+
+* Storage
+
+En la cuarta pestaña se tendrá la opción de Storage para que el usuario pueda subir a la nube de Firebase Storage una imagen de su dispositivo móvil, teniendo la funcionalidad de adjuntar imagen y subir, siendo posible ver la imagen que va a subir en la aplicación móvil junto con un texto para poder descargar la imagen ya en la nube.
+
+
+![alt text](https://i.imgur.com/tWPKyoE.png)
 
 La aplicación móvil de Películas tendrá una navegación ágil con la que el usuario puede adaptarse para futuras actualizaciones.
 

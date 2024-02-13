@@ -49,7 +49,7 @@ class _ProfileInfoState extends State<ProfileInfo> {
           return Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                rowImage(state.profile.username),
+                rowImage(state.profile.avatar.tmdb.avatarPath, state.profile.username),
                 ExpansionPanelList.radio(
                   expandIconColor: Colors.deepPurpleAccent,
                   expandedHeaderPadding: EdgeInsets.only(left: 10, right: 10),
@@ -60,7 +60,7 @@ class _ProfileInfoState extends State<ProfileInfo> {
                       backgroundColor: Colors.deepPurple.shade100,
                       headerBuilder: (BuildContext context, bool isExpanded) {
                         return ListTile(
-                          contentPadding: EdgeInsets.only(left: 10),
+                          contentPadding: const EdgeInsets.only(left: 10),
                           title: step.title == '0' ? 
                           Text('Perfil',
                             style: styleTitle(),
@@ -88,7 +88,7 @@ class _ProfileInfoState extends State<ProfileInfo> {
       }
     );
   }
-  rowImage(String right){
+  rowImage(String left, String right){
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
@@ -96,6 +96,7 @@ class _ProfileInfoState extends State<ProfileInfo> {
             radius: 90,
             child: CircleAvatar(
               radius: 80,
+              // backgroundImage: NetworkImage('https://api.themoviedb.org$left'), La imagen se consulta pero la API no trae respuesta para la imagen.
               backgroundImage: NetworkImage('https://media.themoviedb.org/t/p/w300_and_h300_face/vLw9qJFxmnZGbpusBHb7sYlG7Io.jpg'),
                     ),
           ),

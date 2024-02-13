@@ -21,18 +21,19 @@ class _MovieRowState extends State<MovieRow> {
            ListTile(
              title: Text(widget.movie.title),
              subtitle: Text(widget.movie.releaseDate.toString()),
-             trailing: Icon(Icons.favorite_outline),
+             trailing: const Icon(Icons.favorite_outline),
            ),
-           Container(
+           SizedBox(
              height: 200.0,
              child: Ink.image(
-               image: NetworkImage(
+               image: const NetworkImage(
+                  // 'https://api.themoviedb.org${widget.movie.posterPath}'La imagen se consulta pero la API no trae respuesta.
                   'https://cdn.pixabay.com/photo/2015/01/11/09/19/film-596009_640.jpg'),
                fit: BoxFit.cover,
              ),
            ),
            Container(
-             padding: EdgeInsets.all(16.0),
+             padding: const EdgeInsets.all(16.0),
              alignment: Alignment.centerLeft,
              child: Text(widget.movie.overview),
            ),

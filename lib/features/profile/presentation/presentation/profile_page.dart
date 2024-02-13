@@ -20,7 +20,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
     return BlocProvider<ProfileBloc>(
           create: (_) => sl<ProfileBloc>()..getProfile(),
-          child: ProfileInfo()
+          child: const ProfileInfo()
         );
   }
 }

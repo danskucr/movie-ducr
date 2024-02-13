@@ -28,8 +28,7 @@ class _LeadingPageState extends State<LeadingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-      // leading: Icon(Icons.close),
-        title: Text('Peliculas',
+        title: const Text('Peliculas',
         style: TextStyle(
         fontSize: 25,
         color: Colors.black,
