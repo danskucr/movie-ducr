@@ -83,7 +83,7 @@ class _ProfileInfoState extends State<ProfileInfo> {
 
             ],);
         }else{
-          return Text("Error al consultar Perfil");
+          return const Text("Error al consultar Perfil");
         }
       }
     );
@@ -92,10 +92,10 @@ class _ProfileInfoState extends State<ProfileInfo> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-          CircleAvatar(
+          const CircleAvatar(
             radius: 90,
             child: CircleAvatar(
-              radius: 80, // Image radius
+              radius: 80,
               backgroundImage: NetworkImage('https://media.themoviedb.org/t/p/w300_and_h300_face/vLw9qJFxmnZGbpusBHb7sYlG7Io.jpg'),
                     ),
           ),
