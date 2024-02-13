@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "778566062251",
+    "project_id": "movie-ducr",
+    "storage_bucket": "movie-ducr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778566062251:android:6574ed677b4cf1ccdc67ee",
+        "android_client_info": {
+          "package_name": "com.example.movie_ducr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqxSUKIX1jeqAuaVn7gYzPXiR2gmU_bfE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

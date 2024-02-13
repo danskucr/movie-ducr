@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movie_ducr/features/maps/presentation/page/maps_page.dart';
 import 'package:movie_ducr/features/movies/presentation/page/movies_page.dart';
 import 'package:movie_ducr/features/profile/presentation/presentation/profile_page.dart';
+import 'package:movie_ducr/features/storage/presentation/presentation/storage_image_page.dart';
 
 class LeadingPage extends StatefulWidget {
   const LeadingPage({super.key});
@@ -15,7 +16,8 @@ class _LeadingPageState extends State<LeadingPage> {
   static const List<Widget> _widgetOptions = <Widget>[
     ProfilePage(),
     MoviesPage(),
-    MapsPage()
+    MapsPage(),
+    StorageImagePage()
   ];
   void _onItemTapped(int index) {
     setState(() {
@@ -40,13 +42,16 @@ class _LeadingPageState extends State<LeadingPage> {
       body: Center(
         child: _widgetOptions.elementAt(position),
       ),
-      bottomNavigationBar: BottomNavigationBar(items: const <BottomNavigationBarItem>[
-      BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil'),
-      BottomNavigationBarItem(icon: Icon(Icons.movie), label: 'Peliculas'),
-      BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Mapa')
-    ],
-    onTap: _onItemTapped,
-    currentIndex: position,), 
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil'),
+          BottomNavigationBarItem(icon: Icon(Icons.movie), label: 'Peliculas'),
+          BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Mapa'),
+          BottomNavigationBarItem(icon: Icon(Icons.storage), label: 'Storage')
+        ],
+        type: BottomNavigationBarType.fixed,
+      onTap: _onItemTapped,
+      currentIndex: position), 
     );
   }
 }
