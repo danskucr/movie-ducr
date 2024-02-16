@@ -10,20 +10,20 @@ void main() async {
   await Hive.initFlutter();
   await sl.init();
   Firebase.initializeApp();
-  runApp(const MyApp());
+  runApp(const Peliculas());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Peliculas extends StatelessWidget {
+  const Peliculas({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Peliculas',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LeadingPage(),
+      home: const LeadingPage(),
     );
   }
 }
